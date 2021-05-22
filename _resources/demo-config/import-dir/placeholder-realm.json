@@ -1,6 +1,10 @@
 {
   "id" : "placeholder",
   "realm" : "placeholder",
+  "loginTheme": "theme-minimal",
+  "accountTheme": "theme-minimal",
+  "adminTheme": "theme-minimal",
+  "emailTheme": "theme-minimal",
   "notBefore" : 0,
   "revokeRefreshToken" : false,
   "refreshTokenMaxReuse" : 0,
