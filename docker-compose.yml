@@ -36,8 +36,9 @@ services:
       - ./_resources/demo-config/standalone-ha.xml:/opt/jboss/keycloak/standalone/configuration/standalone-ha.xml
       - ./_resources/demo-config/import-dir:/opt/jboss/keycloak/import-dir
       - ./_resources/demo-config/export-dir:/opt/jboss/keycloak/export-dir
-      #- ./theme-minimal/src/main/resources/theme/theme-minimal:/opt/jboss/keycloak/themes/theme-minimal
-      - ./theme-minimal/target/theme-minimal-0.0.1-SNAPSHOT.jar:/opt/jboss/keycloak/standalone/deployments/theme-minimal-0.0.1-SNAPSHOT.jar
+      # Uncomment line 41 (and comment out line 40) to load the theme from the jar file---thereby preventing live editing the theme
+      - ./theme-minimal/src/main/resources/theme/theme-minimal:/opt/jboss/keycloak/themes/theme-minimal
+      #- ./theme-minimal/target/theme-minimal-0.0.1-SNAPSHOT.jar:/opt/jboss/keycloak/standalone/deployments/theme-minimal-0.0.1-SNAPSHOT.jar 
       - ./provider-domain/target/provider-domain-0.0.1-SNAPSHOT.jar:/opt/jboss/keycloak/standalone/deployments/provider-domain-0.0.1-SNAPSHOT.jar
       - ./spi-registration-profile/target/spi-registration-profile-0.0.1-SNAPSHOT.jar:/opt/jboss/keycloak/standalone/deployments/spi-registration-profile-0.0.1-SNAPSHOT.jar
       - ./spi-resource/target/spi-resource-0.0.1-SNAPSHOT.jar:/opt/jboss/keycloak/standalone/deployments/spi-resource-0.0.1-SNAPSHOT.jar
