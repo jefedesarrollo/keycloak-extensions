@@ -395,8 +395,19 @@
         "jsonType.label" : "String"
       }
     } ],
-    "defaultClientScopes" : [ ],
-    "optionalClientScopes" : [ ]
+    "defaultClientScopes": [
+      "web-origins",
+      "role_list",
+      "profile",
+      "roles",
+      "email"
+    ],
+    "optionalClientScopes": [
+      "address",
+      "phone",
+      "offline_access",
+      "microprofile-jwt"
+    ]
   }, {
     "id" : "27ba8ed2-2413-4962-ad01-b22dc8109058",
     "clientId" : "account-console",
@@ -434,8 +445,19 @@
       "consentRequired" : false,
       "config" : { }
     } ],
-    "defaultClientScopes" : [ ],
-    "optionalClientScopes" : [ ]
+    "defaultClientScopes": [
+      "web-origins",
+      "role_list",
+      "profile",
+      "roles",
+      "email"
+    ],
+    "optionalClientScopes": [
+      "address",
+      "phone",
+      "offline_access",
+      "microprofile-jwt"
+    ]
   }, {
     "id" : "7a667c5f-3de1-42a6-a45a-8240708c55a0",
     "clientId" : "admin-cli",
@@ -461,8 +483,19 @@
     "authenticationFlowBindingOverrides" : { },
     "fullScopeAllowed" : false,
     "nodeReRegistrationTimeout" : 0,
-    "defaultClientScopes" : [ ],
-    "optionalClientScopes" : [ ]
+    "defaultClientScopes": [
+      "web-origins",
+      "role_list",
+      "profile",
+      "roles",
+      "email"
+    ],
+    "optionalClientScopes": [
+      "address",
+      "phone",
+      "offline_access",
+      "microprofile-jwt"
+    ]
   }, {
     "id" : "89a7dee6-eaec-400b-a421-2b8c4f5820c8",
     "clientId" : "broker",
@@ -488,8 +521,19 @@
     "authenticationFlowBindingOverrides" : { },
     "fullScopeAllowed" : false,
     "nodeReRegistrationTimeout" : 0,
-    "defaultClientScopes" : [ ],
-    "optionalClientScopes" : [ ]
+    "defaultClientScopes": [
+      "web-origins",
+      "role_list",
+      "profile",
+      "roles",
+      "email"
+    ],
+    "optionalClientScopes": [
+      "address",
+      "phone",
+      "offline_access",
+      "microprofile-jwt"
+    ]
   }, {
     "id" : "414f30fe-20e1-47e7-b33e-eb047dc19aa3",
     "clientId" : "client-one",
@@ -595,8 +639,19 @@
     "authenticationFlowBindingOverrides" : { },
     "fullScopeAllowed" : false,
     "nodeReRegistrationTimeout" : 0,
-    "defaultClientScopes" : [ ],
-    "optionalClientScopes" : [ ]
+    "defaultClientScopes": [
+      "web-origins",
+      "role_list",
+      "profile",
+      "roles",
+      "email"
+    ],
+    "optionalClientScopes": [
+      "address",
+      "phone",
+      "offline_access",
+      "microprofile-jwt"
+    ]
   }, {
     "id" : "1f147d69-6d4c-4820-9cf1-887b7cd2f7de",
     "clientId" : "security-admin-console",
@@ -641,8 +696,19 @@
         "jsonType.label" : "String"
       }
     } ],
-    "defaultClientScopes" : [ ],
-    "optionalClientScopes" : [ ]
+    "defaultClientScopes": [
+      "web-origins",
+      "role_list",
+      "profile",
+      "roles",
+      "email"
+    ],
+    "optionalClientScopes": [
+      "address",
+      "phone",
+      "offline_access",
+      "microprofile-jwt"
+    ]
   } ],
   "clientScopes" : [ {
     "id" : "9bec96af-fec6-4d3c-a2e8-d4de5fe2f7f4",
