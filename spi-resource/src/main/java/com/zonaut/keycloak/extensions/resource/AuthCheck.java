@@ -19,7 +19,7 @@ public class AuthCheck {
     private static final Logger log = Logger.getLogger(AuthCheck.class);
 
     public static void whoAmI(KeycloakSession session) {
-        final AuthenticationManager.AuthResult authResult = new AppAuthManager().authenticateBearerToken(session);
+        final AuthenticationManager.AuthResult authResult = new AppAuthManager.BearerTokenAuthenticator(session).authenticate();
         if (authResult == null) {
             log.infof("Anonymous user entering realm %s", session.getContext().getRealm().getName());
         } else {
@@ -30,7 +30,7 @@ public class AuthCheck {
     }
 
     public static void hasRole(KeycloakSession session, String role) {
-        final AuthenticationManager.AuthResult authResult = new AppAuthManager().authenticateBearerToken(session);
+        final AuthenticationManager.AuthResult authResult = new AppAuthManager.BearerTokenAuthenticator(session).authenticate();
         isAuthenticated(authResult);
 
         if (authResult.getToken().getRealmAccess() == null || !authResult.getToken().getRealmAccess().isUserInRole(role)) {
@@ -39,7 +39,7 @@ public class AuthCheck {
     }
 
     public static void isClient(KeycloakSession session, String clientName) {
-        final AuthenticationManager.AuthResult authResult = new AppAuthManager().authenticateBearerToken(session);
+        final AuthenticationManager.AuthResult authResult = new AppAuthManager.BearerTokenAuthenticator(session).authenticate();
         isAuthenticated(authResult);
 
         ClientModel client = session.getContext().getRealm().getClientByClientId(authResult.getToken().getIssuedFor());
@@ -49,7 +49,7 @@ public class AuthCheck {
     }
 
     public static void isAuthenticated(KeycloakSession session) {
-        final AuthenticationManager.AuthResult authResult = new AppAuthManager().authenticateBearerToken(session);
+        final AuthenticationManager.AuthResult authResult = new AppAuthManager.BearerTokenAuthenticator(session).authenticate();
         isAuthenticated(authResult);
     }
 
